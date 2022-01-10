@@ -166,20 +166,20 @@ void addColors() {
 	library->addColor("Green", SDL_Color{ 0, 255, 0 });
 	library->addColor("Blue", SDL_Color{ 0, 0, 255 });
 	// secondary colors
-	library->addColor("Yellow", SDL_Color{ 256, 256, 0 });
-	library->addColor("Cyan", SDL_Color{ 0, 256, 256 });
-	library->addColor("Magenta", SDL_Color{ 256, 0, 256 });
+	library->addColor("Yellow", SDL_Color{ 255, 255, 0 });
+	library->addColor("Cyan", SDL_Color{ 0, 255, 255 });
+	library->addColor("Magenta", SDL_Color{ 255, 0, 255 });
 	// tertiary colors
 	library->addColor("Olive", SDL_Color{ 128, 128, 0 });
 	library->addColor("Teal", SDL_Color{ 0, 128, 128 });
 	library->addColor("Purple", SDL_Color{ 128, 0, 128 });
 	// quaternary colors
-	library->addColor("Orange", SDL_Color{ 256, 128, 0 });
-	library->addColor("Pnik", SDL_Color{ 256, 0, 128 });
-	library->addColor("Bright Green", SDL_Color{ 0, 256, 128 });
-	library->addColor("Aqua", SDL_Color{ 128, 256, 0 });
-	library->addColor("Sky Blue", SDL_Color{ 0, 128, 256 });
-	library->addColor("Lavender", SDL_Color{ 128, 0, 256 });
+	library->addColor("Orange", SDL_Color{ 255, 128, 0 });
+	library->addColor("Pnik", SDL_Color{ 255, 0, 128 });
+	library->addColor("Bright Green", SDL_Color{ 0, 255, 128 });
+	library->addColor("Aqua", SDL_Color{ 128, 255, 0 });
+	library->addColor("Sky Blue", SDL_Color{ 0, 128, 255 });
+	library->addColor("Lavender", SDL_Color{ 128, 0, 255 });
 	// monochromatic shades
 	library->addColor("Black Gray", SDL_Color{ 32, 32, 32 });
 	library->addColor("Dark Gray", SDL_Color{ 64, 64, 64 });
@@ -460,7 +460,7 @@ int main(int argc, char* args[]) {
 		gSurface = SDL_CreateRGBSurface(0, SCREEN_WIDTH, SCREEN_HEIGHT, 24, 0, 0, 0, 0);
 	}
 
-	printf("%d, %d, %d, %d\n", gSurface->pitch, gSurface->format, gSurface->w, gSurface->h);
+	printf("%d, %p, %d, %d\n", gSurface->pitch, (void*)gSurface->format, gSurface->w, gSurface->h);
 
 	// prepare keyboard listener
 	const Uint8 *keys = SDL_GetKeyboardState(NULL);

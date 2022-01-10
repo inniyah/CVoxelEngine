@@ -11,7 +11,7 @@ private:
 public:
 	void defaultOptions();
 	void renderFrame(Uint8*, int, int, int);
-	void Renderer::renderThread(Uint8*, int, int, int, int, float*, int);
+	void renderThread(Uint8*, int, int, int, int, float*, int);
 	SDL_Color raycastFrom(int, int, int, int, float*);
 	SDL_Color raycast(float, float, float, float*);
 	SDL_Color calculateColor(SDL_Color, int, float, float, float, float, float, float);

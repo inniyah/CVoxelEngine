@@ -1,5 +1,8 @@
 #include "ColorLibrary.h"
 
+static LabeledColor NullColor = LabeledColor{ "", SDL_Color{ 0, 0, 0 } };
+static LabeledPalette EmptyPalette = LabeledPalette{ "", vector<string>({ }) };
+
 LabeledColor ColorLibrary::getRandomColor() {
 	return colors->at(rand() % colors->size());
 }
@@ -11,6 +14,7 @@ LabeledColor ColorLibrary::getColor(string name) {
 			return c;
 		}
 	}
+	return NullColor;
 }
 
 LabeledColor ColorLibrary::getColor(int index) {
@@ -24,6 +28,7 @@ LabeledPalette ColorLibrary::getPalette(string name) {
 			return p;
 		}
 	}
+	return EmptyPalette;
 }
 
 LabeledPalette ColorLibrary::getPalette(int index) {

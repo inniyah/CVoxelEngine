@@ -51,8 +51,8 @@ void Renderer::renderThread(Uint8* pixels, int y1, int y2, int width, int height
 
 void Renderer::renderFrame(Uint8* pixels, int width, int height, int pixelScale) {
 	//Set up reference frame
-	double yaw = camera->rotY;
-	double pitch = camera->rotX;
+	float yaw = camera->rotY;
+	float pitch = camera->rotX;
 	float ref[9] = {
 		 sin(pitch) * cos(yaw), sin(pitch) * sin(yaw), -cos(pitch),
 		 -sin(yaw), cos(yaw), 0,
